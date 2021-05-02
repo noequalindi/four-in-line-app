@@ -1,9 +1,3 @@
-export interface CirclesPositions {
-  [key: string]: Player;
-}
-
-export type Player = "red" | "yellow" | "";
-
 export interface IMatrixProps {
   columns: number;
   rows: number;
@@ -14,4 +8,10 @@ export interface State {
   gameStatus: string;
   playerTurn: Player;
   restart?: boolean;
+}
+
+export type Player = "red" | "yellow" | "";
+
+export interface CirclesPositions {
+  [key: string]: Player;
 }
