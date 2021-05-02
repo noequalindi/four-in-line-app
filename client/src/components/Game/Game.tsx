@@ -12,7 +12,6 @@ const initState: State = {
 }
 
 const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
- // const { gameState , setGameState } = useContextOfGame;
   const classes = useStyles()
 
   const [ gameState, setGameState ] = useState(initState)
@@ -20,6 +19,9 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
   // useEffect( () => {
   //   socket.emit('connected');
   // })
+  const handleGrooveClick = useCallback((grooveId: string) => {
+    socket?.emit('grooveClick', grooveId);
+  }, [socket]);
 
   useEffect(() => {
     socket.on('gameState', (newState: State) => {
@@ -28,18 +30,29 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
 
   }, [socket]);
 
+
+  const renderStatusMessage = () => {
+    const { gameStatus } = gameState;
+    return <h1>{gameStatus}</h1>;
+  }
   const restartGame = () => {
     setGameState(initState)
   }
-  
+  const { circlesPositions, restart } = gameState;
 
   return (
     <div className={classes.app}>
-  
-      <Board />
-        
+      {renderStatusMessage()}
+      {!restart ? 
+      <Board 
+        columns={columns} 
+        rows={rows} 
+        circlesPositions={circlesPositions} 
+        onGrooveClick={handleGrooveClick} 
+        />
+        :
         <button onClick={restartGame}>Restart Game</button>
-      
+      }
     </div>
   );
 

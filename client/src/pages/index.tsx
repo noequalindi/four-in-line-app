@@ -5,6 +5,11 @@ import socket from '../components/Socket/Socket';
 import Grid from '@material-ui/core/Grid';
 import Game from '../components/Game/Game';
 
+enum GameBoard {
+  columns = 7,
+  rows = 6,
+}
+
 export default function Home() {
    socket.emit('connected', 'HELLO!');
   const [registered, setRegistered] = useState(false);
@@ -21,7 +26,7 @@ export default function Home() {
          <h3 className={styles.title}>
           Welcome to Four in line app!
         </h3>
-        <Game/>
+        <Game columns={GameBoard.columns} rows={GameBoard.rows} />
       </Grid>
     </Grid>
  
