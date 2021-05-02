@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Game from '../components/Game/Game'
+import Game from '../components/Game/Game';
 import Grid from '@material-ui/core/Grid';
 
 enum GameBoard {

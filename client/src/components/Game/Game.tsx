@@ -35,16 +35,12 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
 
   return (
     <div className={classes.app}>
-      {!restart ? 
       <Board 
         columns={columns} 
         rows={rows} 
         circlesPositions={circlesPositions} 
         onGrooveClick={handleGrooveClick} 
         />
-        :
-        <button onClick={restartGame}>Restart Game</button>
-      }
     </div>
   );
 
