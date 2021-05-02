@@ -8,7 +8,7 @@ enum GameBoard {
   rows = 6,
 }
 
-export default function Home() {
+export default function Home(playerColor) {
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Home() {
       </Grid>
     </Grid>
     <Grid item xs={12}>
-       <Game columns={GameBoard.columns} rows={GameBoard.rows} />
+       <Game columns={GameBoard.columns} rows={GameBoard.rows} playerColor={playerColor}/>
     </Grid>
     </>
   )
