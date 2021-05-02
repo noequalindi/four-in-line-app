@@ -16,9 +16,6 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
 
   const [ gameState, setGameState ] = useState(initState)
 
-  // useEffect( () => {
-  //   socket.emit('connected');
-  // })
   const handleGrooveClick = useCallback((grooveId: string) => {
     socket?.emit('grooveClick', grooveId);
   }, [socket]);
@@ -31,10 +28,6 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
   }, [socket]);
 
 
-  const renderStatusMessage = () => {
-    const { gameStatus } = gameState;
-    return <h1>{gameStatus}</h1>;
-  }
   const restartGame = () => {
     setGameState(initState)
   }
@@ -42,7 +35,6 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows }) => {
 
   return (
     <div className={classes.app}>
-      {renderStatusMessage()}
       {!restart ? 
       <Board 
         columns={columns} 
