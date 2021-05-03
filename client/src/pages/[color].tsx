@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Home from './index';
 import { useRouter } from "next/router";
+import Redirect from "../components/Redirect/Redirect";
 
-const RedPlayer = () => {
-    const router = useRouter();
-    const {color} = router.query;
-    return (
-        <Home playerColor={color}/>
-    )
+enum PlayerColor {
+    RED = 'red',
+    YELLOW = 'yellow',
 }
-export default RedPlayer;
+const Player = () => {
+    const router = useRouter();
+    const { color } = router.query;
+    
+    return (<Home playerColor={color}/> )
+}
+export default Player;

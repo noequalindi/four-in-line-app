@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: hsl(0, 0%, 8%);
 }
 
 .main {
@@ -48,6 +49,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  animation: move-text 0.75s forwards;
 }
 
 .title,
@@ -118,4 +120,9 @@
     width: 100%;
     flex-direction: column;
   }
+}
+@keyframes move-text {
+  0% { bottom: -0.2em; opacity: 1; }
+  50% { bottom: 0.2em; }
+  100% { bottom: 0; opacity: 1; }
 }
