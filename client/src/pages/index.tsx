@@ -8,8 +8,7 @@ enum GameBoard {
   rows = 6,
 }
 
-export default function Home(playerColor) {
-
+export default function Home({playerColor}) {
   return (
     <>
     <Head>

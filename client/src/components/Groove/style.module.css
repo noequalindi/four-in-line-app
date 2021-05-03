@@ -1,0 +1,23 @@
+
+.groove {
+        width: 80px;
+        height: 80px;
+        border: solid 10px #4F2876;
+        border-radius: 100%;
+        background-color: white;
+      }
+      
+      .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: white;
+      }
+      
+      .yellow {
+        background-color: #FFCB53;
+      }
+      
+      .red {
+        background-color: #FF5743;
+      }

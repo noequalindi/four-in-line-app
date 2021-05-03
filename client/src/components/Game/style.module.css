@@ -1,0 +1,9 @@
+.app {
+        display: inline-block;
+        margin: 20px auto;
+        padding: 20px;
+}
+.buttonContainer {
+        align-items: 'center';
+        text-align: 'center';
+}

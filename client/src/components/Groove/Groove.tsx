@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useMemo} from "react";
 import classNames from "classnames";
 import { IGrooveProps } from "./types";
-import useStyles from './style'
+import classes from './style.module.css';
 
 const Groove: React.FC<IGrooveProps> = ({ id, circleType, onClick}) => {
-    const classes = useStyles()
-    const circleClass = classNames(classes.circle, circleType === "red" ? classes.red : classes.yellow);
+    const circleClass = useMemo(() => classNames(classes.circle, circleType === "red" ? classes.red : classes.yellow),
+    [classNames, circleType]
+    );
     return (
       <div className={classes.groove} onClick={() => onClick(id)}>
         {circleType && <div className={circleClass} />}
