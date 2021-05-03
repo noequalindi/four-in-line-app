@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Home from './index';
+import Home from '../components/Home/Home';
 import { useRouter } from "next/router";
 import Redirect from "../components/Redirect/Redirect";
 

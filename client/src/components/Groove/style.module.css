@@ -1,23 +1,50 @@
-
 .groove {
-        width: 80px;
-        height: 80px;
-        border: solid 10px #4F2876;
-        border-radius: 100%;
-        background-color: white;
-      }
-      
-      .circle {
-        width: 60px;
-        height: 60px;
-        border-radius: 100%;
-        background-color: white;
-      }
-      
-      .yellow {
-        background-color: #FFCB53;
-      }
-      
-      .red {
-        background-color: #FF5743;
-      }
+  width: 80px;
+  height: 80px;
+  border: solid 10px #4f2876;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: white;
+  display: none;
+}
+
+.yellow {
+  background-color: #ffcb53;
+  display: block;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.red {
+  background-color: #ff5743;
+  display: block;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.8s;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
