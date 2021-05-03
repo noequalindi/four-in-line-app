@@ -7,6 +7,7 @@ enum PlayerColor {
     RED = 'red',
     YELLOW = 'yellow',
 }
+
 const Player = () => {
     const router = useRouter();
     const { color } = router.query;

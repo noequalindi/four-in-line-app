@@ -12,7 +12,6 @@ const io = socketio(server, {
   },
 });
 
-
 io.on("connection", player(io));
 
 server.listen(5000, () => console.log("Server Initializated"));

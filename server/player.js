@@ -40,12 +40,9 @@ const checkHorizontallyConnections = (circlesPositions) => {
 
     for (let col = 0; col < columns; col++) {
       const circle = circlesPositions[`${row}:${col}`];
-
-      if (circle && circle === repetitionCountStatus.player) {
-        repetitionCountStatus.count++;
-      } else {
-        repetitionCountStatus = { player: circle, count: 1 };
-      }
+      circle && circle === repetitionCountStatus.player
+        ? repetitionCountStatus.count++
+        : (repetitionCountStatus = { player: circle, count: 1 });
 
       if (repetitionCountStatus.count === 4) {
         const playerWinner = {
@@ -65,11 +62,10 @@ const checkVerticallyConnections = (circlesPositions) => {
     for (let row = 0; row < rows; row++) {
       const circle = circlesPositions[`${row}:${col}`];
 
-      if (circle && circle === repetitionCountStatus.player) {
-        repetitionCountStatus.count++;
-      } else {
-        repetitionCountStatus = { player: circle, count: 1 };
-      }
+      circle && circle === repetitionCountStatus.player
+        ? repetitionCountStatus.count++
+        : (repetitionCountStatus = { player: circle, count: 1 });
+
       if (repetitionCountStatus.count === 4) {
         const player = {
           player: repetitionCountStatus.player,

@@ -3,7 +3,32 @@
         margin: 20px auto;
         padding: 20px;
 }
-.buttonContainer {
+
+.dialogContainer {
         align-items: 'center';
         text-align: 'center';
+        padding: 25px;
+        display: flex;
+        margin: 5px auto;
+        border-radius: 8px;
 }
+.alignCenter {
+        display: flex;
+        margin: 10px auto;
+        align-items: center;
+        flex-flow: column;
+}
+.actions {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+}
+.tipography {
+        margin: auto;
+        padding: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: 600;
+}
+
+
