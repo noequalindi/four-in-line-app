@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router'
+import React from 'react'
+import Redirect from '../components/Redirect/Redirect'
 
 export default function Init() {
 
-  const router = useRouter()
-
   return (
-   
+   <Redirect/>
   )
 }
+
 

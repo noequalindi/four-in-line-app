@@ -32,8 +32,15 @@
   margin-right: 25%;
 }
 .button {
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% + 140px);
+  top: 100px;
+  height: 20px;
+}
+.fontFamily {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 600;
-  margin: 0;
+  size: 18px;
 }

@@ -37,8 +37,8 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows, playerColor }) => {
     socket?.emit('restartGame');
   }, [socket]);
 
-  const { circlesPositions, gameOver, playerTurn } = gameState;
   const GameStyled = (): JSX.Element => {
+  const { circlesPositions, gameOver, playerTurn } = gameState;
 
     if (gameOver && gameOver.winner) setOpenModal(true);
 
@@ -57,10 +57,11 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows, playerColor }) => {
                     <Emoji label="hand" symbol="👉🏻" />
                     {playerTurn === 'red' ? <Emoji label="red" symbol="🔴" /> : <Emoji label="yellow" symbol="🟡" />}
                   </span>
-
+                   <div className={classes.button}>
                   <Button variant="contained" color="secondary" onClick={restartGame}>
-                    <span className={classes.button}> Restart Game </span>
+                   <span className={classes.fontFamily}> Restart Game </span> 
                   </Button>
+                  </div>
                 </Typography>
               </div>
               <Board
@@ -83,16 +84,16 @@ const Game: React.FC<IMatrixProps> = ({ columns, rows, playerColor }) => {
                   <div className={classes.dialogContainer}>
                     <DialogContent>
                       <Typography variant="h4">
-                        <span className={classes.button}> Player {gameOver.player} won!
+                        <span className={classes.fontFamily}> Player {gameOver.player} won!
                        <Emoji label="party" symbol="🥳" />
                           <Emoji label="party2" symbol="🎉" />
                         </span>
                       </Typography>
-                      <span className={classes.alignCenter}>
+                      <div className={classes.alignCenter}>
                         <Button variant="contained" color="secondary" onClick={restartGame}>
-                          <span className={classes.button}> Restart Game </span>
+                          <span className={classes.fontFamily}> Restart Game </span>
                         </Button>
-                      </span>
+                      </div>
                     </DialogContent>
                   </div>
                 </Dialog> : ''

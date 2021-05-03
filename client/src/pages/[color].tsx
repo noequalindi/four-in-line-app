@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Home from '../components/Home/Home';
 import { useRouter } from "next/router";
-import Redirect from "../components/Redirect/Redirect";
+
 
 enum PlayerColor {
     RED = 'red',
@@ -11,7 +11,17 @@ enum PlayerColor {
 const Player = () => {
     const router = useRouter();
     const { color } = router.query;
-    
-    return (<Home playerColor={color}/> )
+
+   useEffect(() => {
+
+        if( color && !( (color === PlayerColor.RED) || (color === PlayerColor.YELLOW) ) ) { 
+            router.push('/init')
+        }
+    }, [router]);
+
+    return (
+     color === PlayerColor.RED || color === PlayerColor.YELLOW ?
+        <Home playerColor={color}/> : <p></p>
+        )
 }
 export default Player;

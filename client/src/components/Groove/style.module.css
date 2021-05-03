@@ -11,40 +11,12 @@
   height: 60px;
   border-radius: 100%;
   background-color: white;
-  display: none;
 }
 
 .yellow {
   background-color: #ffcb53;
-  display: block;
-  -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-name: fadeIn;
-  animation-duration: 1s;
 }
 
 .red {
   background-color: #ff5743;
-  display: block;
-  -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 0.8s;
-  animation-name: fadeIn;
-  animation-duration: 0.8s;
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
