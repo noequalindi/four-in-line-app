@@ -35,32 +35,32 @@ const Redirect: React.FC = () => {
                 >
                     <Grid item xs={12} spacing={3}>
                         <Typography variant="h4">
-                            <span className={classes.fontStyle}>Please choose your color 
+                            <span className={classes.fontStyle}>Please choose your color
                             <Emoji label="happyFace" symbol="😎" />
                             </span>
                         </Typography>
                     </Grid>
                 </Grid>
-               <Grid container
+                <Grid container
                     direction="row"
                     justify="center"
                     alignItems="center"
                     spacing={5}
-                > 
+                >
                     <Grid item xs={3} spacing={3}>
-                        <Button variant="contained" color="secondary" onClick={()=> window.location.href="/red"} value="red">
-                          <Typography variant="h6"><span className={classes.fontStyle}>Red player</span>
-                          </Typography>
-                            </Button>
-               
+                        <Button variant="contained" color="secondary" onClick={() => window.location.href = "/red"} value="red">
+                            <Typography variant="h6"><span className={classes.fontStyle}>Red player</span>
+                            </Typography>
+                        </Button>
+
                     </Grid>
                     <Grid item xs={3}>
-                        <Button variant="contained" color="secondary" onClick={()=> window.location.href="/yellow"} value="yellow">
-                        <Typography variant="h6"> <span className={classes.fontStyle}> Yellow Player </span>
-                        </Typography>
+                        <Button variant="contained" color="secondary" onClick={() => window.location.href = "/yellow"} value="yellow">
+                            <Typography variant="h6"> <span className={classes.fontStyle}> Yellow Player </span>
+                            </Typography>
                         </Button>
-                    </Grid> 
-                    </Grid>               
+                    </Grid>
+                </Grid>
 
             </div>
 

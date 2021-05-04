@@ -2,26 +2,24 @@
 
 ## Getting Started
 
-First, install all dependencies with the command: 
+First, go to the folder /client and install all dependencies with the command: 
 
 ```bash
 npm install
 
 ```
 
-Run the development server. Go to folder /client and run:
+Run the development server in the same folder (/client):
 
 ```bash
 npm run dev
 
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 ## Server
-To run the back-end server, go to folder /service and run the command 
+First, go to the folder /service, and install all dependencies with the command npm install.  Then you can run the server with the command: 
 
 ```bash
 npm run dev
 ```
 ## Play the game
-Open [http://localhost:3000/yellow] and [http://localhost:3000/red] and start to play!
+Open [http://localhost:3000/] and start to play!
