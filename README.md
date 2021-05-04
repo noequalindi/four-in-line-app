@@ -3,6 +3,9 @@
 
 ![image](https://user-images.githubusercontent.com/39881937/116954261-d9c25c80-ac65-11eb-90fe-31e72dc690b6.png)
 
+![image](https://user-images.githubusercontent.com/39881937/116954604-d8ddfa80-ac66-11eb-975f-88cac420f5c5.png)
+
+
 ## Getting Started
 
 First, go to the folder /client and install all dependencies with the command: 
