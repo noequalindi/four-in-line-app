@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  background: linear-gradient(
+    62deg,
+    #be2e03,
+    #6d1537,
+    rgb(51, 28, 87) 0,
+    #0c795f,
+    #38023d
+  );
+  animation: gradient 12s ease infinite;
+  background-size: 400% 400%;
+  color: white;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 40px auto;
+  min-height: 550px;
+
+}
+.content {
+  margin-top: 20px;
+}
+.fontStyle {
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  animation: move-text 0.75s forwards;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

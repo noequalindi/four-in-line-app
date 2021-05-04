@@ -1,0 +1,44 @@
+.app {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.dialogContainer {
+  align-items: "center";
+  text-align: "center";
+  padding: 25px;
+  display: flex;
+  margin: 5px auto;
+  border-radius: 8px;
+}
+.alignCenter {
+  display: flex;
+  margin: 10px auto;
+  align-items: center;
+  flex-flow: column;
+}
+.actions {
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.tipography {
+  padding: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 600;
+  position:absolute;
+}
+.button {
+  position: relative;
+  left: calc(50% + 130px);
+  bottom: calc(40% - 100px);
+}
+.fontFamily {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 600;
+  size: 18px;
+}
